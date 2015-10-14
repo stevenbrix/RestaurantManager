@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource PageBackground}">
-        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Text="**Clear All Orders**" TextAlignment="Center"/>
+        <GridView />
+        <Button VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Content="**Clear All Orders**" Foreground="White"/>
+        <AppBar>
+            <AppBarButton Icon="Home" Click="AppBarButton_Click" />
+        </AppBar>
     </Grid>
+
 </Page>

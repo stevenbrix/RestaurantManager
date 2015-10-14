@@ -7,10 +7,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource PageBackground}">
-        <TextBlock Text="Special Requests:" TextAlignment="Center" FontSize="20" Height="41" VerticalAlignment="Bottom" Margin="305,0,160,253"/>
-        <TextBlock Text="Order Items:" TextAlignment="Center" Margin="450,66,0,253" FontSize="20"/>
-        <TextBlock Text="**Add to Order**" TextAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,305,0"/>
-        <TextBlock Text="**Submit Order**" TextAlignment="Center" VerticalAlignment="Bottom" Margin="340,0,-5,0"/>
+    <Grid Background="{StaticResource PageBackground}" Margin="0,0,-241,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*" />
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".3*" />
+            <RowDefinition Height=".3*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*" />
+            <ColumnDefinition Width=".25*" />
+            <ColumnDefinition Width=".25*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Special Requests:" TextAlignment="Left" FontSize="20" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Order Items:" TextAlignment="Left" FontSize="20" VerticalAlignment="Bottom"/>
+        <Button x:Name="addToOrder" Content="**Add to Order**" Foreground="White" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" Click="addToOrder_Click"/>
+        <Button x:Name="submit" Content="**Submit Order**" Foreground="White" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Click="submit_Click"/>
+        <ListView Grid.Row="2" Grid.Column="0" />
+        <ListView Grid.Row="2" Grid.Column="2" />
+        <AppBar Grid.ColumnSpan="3">
+            <AppBarButton Icon="Home" Click="AppBarButton_Click" />
+        </AppBar>
     </Grid>
 </Page>

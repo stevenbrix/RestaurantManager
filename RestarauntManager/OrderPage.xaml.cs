@@ -26,5 +26,20 @@ namespace RestarauntManager
         {
             this.InitializeComponent();
         }
+
+        private void submit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void addToOrder_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

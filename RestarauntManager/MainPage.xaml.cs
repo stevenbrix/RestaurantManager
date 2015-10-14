@@ -27,5 +27,14 @@ namespace RestarauntManager
             this.InitializeComponent();
         }
 
+        private void goToOrders_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ExpeditePage));
+        }
+
+        private void submitOrder_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OrderPage));
+        }
     }
 }

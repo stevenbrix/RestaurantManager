@@ -101,5 +101,11 @@ namespace RestarauntManager
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            var currentPage = Window.Current.Content as Page;
+            currentPage.Frame.Navigate(typeof(MainPage));
+        }
     }
 }

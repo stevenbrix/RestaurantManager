@@ -8,22 +8,19 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource PageBackground}">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Restaurant Manager" Foreground="#FFF7EDED" Margin="176,105,179,212" />
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="254,153,0,0" TextWrapping="Wrap" Text="Internal Test Version" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="0,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="21.333" Height="179" TextAlignment="Center">
-        	<Run/>
-        	<LineBreak/>
-        	<Run/>
-        	<LineBreak/>
-        	<Run Text="**Go to Orders View**"/>
-        </TextBlock>
-        <TextBlock x:Name="textBlock2_Copy" Margin="335,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Height="179" TextAlignment="Center" LineHeight="10.667">
-        	<Run/>
-        	<LineBreak/>
-        	<Run/>
-        	<LineBreak/>
-        	<Run Text="**Submit Order**"/>
-        </TextBlock>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".4*" />
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".4*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Restaurant Manager" Foreground="#FFF7EDED" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Internal Test Version" VerticalAlignment="Top" FontSize="16" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="goToOrders" Content="**Go to Orders View**" Foreground="White" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="goToOrders_Click"/>
+        <Button x:Name="submitOrder" Content="**Submit Order**" Foreground="White" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="submitOrder_Click"/>
     </Grid>
 </Page>
